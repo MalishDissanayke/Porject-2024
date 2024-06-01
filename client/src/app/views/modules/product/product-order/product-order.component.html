@@ -1,0 +1,90 @@
+<app-page-header title="Product Order" [breadcrumbSegments]="['Products', 'Add New Order']"></app-page-header>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-card>
+        <mat-card-content>
+            <div class="col-md-13">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>User </mat-label>
+                  <mat-select formControlName="userName" required>
+                    <mat-option *ngFor="let user of userList" [value]="user.id">{{user.username}}</mat-option>
+                  </mat-select>
+                  <mat-hint>Ex: Sandun</mat-hint>
+                  <mat-error *ngIf="userNameField.invalid">
+                    <span *ngIf="userNameField.errors.required">Calling Name is required</span>
+                    <span *ngIf="userNameField.errors.server">{{nameField.errors.server.join(', ')}}</span>
+                    <span *ngIf="userNameField.errors.minlength">Calling Name should has at least null characters. </span>
+                    <span *ngIf="userNameField.errors.maxlength">Calling Name can have a maximum of 255 characters. </span>
+                  </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput [matDatepicker]="picker1" placeholder="Order date" formControlName="orderdate" required>
+                        <mat-hint>Ex: 5/25/2024</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                        <mat-error *ngIf="orderdateField.invalid">
+                          <span *ngIf="orderdateField.errors.required">Order date is required</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput [matDatepicker]="picker" placeholder="Arrival date" formControlName="arrivaldate" required>
+                        <mat-hint>Ex: 5/25/2024</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-error *ngIf="arrivaldateField.invalid">
+                          <span *ngIf="arrivaldateField.errors.required">Arrival date is required</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+      
+      
+            </div>
+            <div class="form-group">
+                <h3 class="mb-0 mat-subheading-1 font-weight-light">Products</h3>
+                <app-productorder-sub-form [products]="products" [min]="0" [max]="0" formControlName="orderproducts"></app-productorder-sub-form>
+                <div class="error-box" *ngIf="orderproductsField.invalid && !orderproductsField.pristine">
+                  <p *ngIf="orderproductsField.errors.min">Should have at least 0 materials</p>
+                  <p *ngIf="orderproductsField.errors.max">Maximum allowed only 0 Materials</p>
+                  <span *ngIf="orderproductsField.errors.server">{{orderproductsField.errors.server.join(', ')}}</span>
+                </div>
+              </div>
+              <button mat-stroked-button type="button" (click)="setAmount()"><mat-icon>refresh</mat-icon> Generate Total Amount</button>
+              <div class="col-md-13">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Total amount</mat-label>
+                  <input matInput formControlName="amount" readonly>
+                  <mat-hint>Ex: 1000</mat-hint>
+                  <mat-error *ngIf="amountField.invalid">
+                    <span *ngIf="amountField.errors.required">Amount is required</span>
+                    <span *ngIf="amountField.errors.qty">work</span> 
+                   </mat-error>
+                </mat-form-field>
+              </div>
+
+
+
+              <div class="text-right mt-5 d-flex">
+                <button *ngIf="privilege.showAll" routerLink="/products/ordertable" class="ml-0" mat-flat-button color="primary"><mat-icon>list</mat-icon> Previous Orders</button>
+                <span class="spacer"></span>
+                <button mat-stroked-button type="reset"><mat-icon>refresh</mat-icon> Clear</button>
+                <button class="mr-0" mat-flat-button color="primary" type="submit"><mat-icon>save</mat-icon> Save</button>
+              </div>
+
+              <!-- <div class="text-right mt-5 d-flex">
+                <button *ngIf="privilege.showAll" routerLink="/products" class="ml-0" mat-flat-button color="primary"><mat-icon>list</mat-icon> Previous Orders</button>
+                <span class="spacer"></span>
+                <button mat-stroked-button type="reset"><mat-icon>refresh</mat-icon> Clear</button>
+                <button class="mr-0" mat-flat-button color="primary" type="submit"><mat-icon>save</mat-icon> Save</button>
+              </div> -->
+
+        </mat-card-content>
+
+        <mat-card-actions align="right">
+            <span class="text-warning">*</span> Required Fields
+          </mat-card-actions>
+    </mat-card>
+</form>

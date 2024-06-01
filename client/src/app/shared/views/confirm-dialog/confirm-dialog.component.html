@@ -1,0 +1,12 @@
+<div class="dialog-wrapper">
+  <h1 mat-dialog-title>{{data.title}} Confirmation</h1>
+  <div mat-dialog-content>
+    <p>{{data.message}}</p>
+  </div>
+  <div mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-raised-button [mat-dialog-close]="false" cdkFocusInitial [hidden]="!isActive"><mat-icon>clear</mat-icon> No</button>
+    <button class="mr-0" [color]="data.color" mat-raised-button [mat-dialog-close]="true" [hidden]="!isActive"><mat-icon>done</mat-icon> Yes</button>
+    <button class="mr-0" [color]="data.color" mat-raised-button [mat-dialog-close]="true" [hidden]="isActive"><mat-icon>done</mat-icon> ok</button>
+  </div>
+</div>
