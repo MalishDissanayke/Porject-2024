@@ -230,7 +230,7 @@ export class MainWindowComponent implements OnInit, OnDestroy {
     addNewProductLink.addUsecaseId(UsecaseList.ADD_PRODUCT);
     productLink.children.push(addNewProductLink);
 
-    const showAllProductLink = new LinkItem('Show All Supplier Purchase Orders', 'products', 'list');
+    const showAllProductLink = new LinkItem('Show All Product Purchase Orders', 'products', 'list');
     showAllProductLink.addUsecaseId(UsecaseList.SHOW_ALL_PRODUCTS);
     productLink.children.push(showAllProductLink);
 

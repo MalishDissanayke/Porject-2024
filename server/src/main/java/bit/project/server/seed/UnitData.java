@@ -8,9 +8,9 @@ import bit.project.server.util.seed.AbstractSeedClass;
 public class UnitData extends AbstractSeedClass {
 
     public UnitData(){
-        addIdNameData(1, "Packets");
-        addIdNameData(2, "Bottles");
-        addIdNameData(3, "Kg");
+        addIdNameData(1, "Bulk");
+        addIdNameData(2, "Individual");
+        addIdNameData(3, "Boxes");
     }
 
 }

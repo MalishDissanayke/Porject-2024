@@ -7,10 +7,10 @@ import bit.project.server.util.seed.SeedClass;
 public class ProducttypeData extends AbstractSeedClass {
 
     public ProducttypeData(){
-        addIdNameData(1, "Flour");
-        addIdNameData(2, "Essance");
-        addIdNameData(3, "Sugar");
-        addIdNameData(4, "Gelatin");
+        addIdNameData(1, "Sanitary");
+        addIdNameData(2, "Cleaning");
+        addIdNameData(3, "Medical");
+        addIdNameData(4, "High end cleaning");
         addIdNameData(5, "Other");
     }
 

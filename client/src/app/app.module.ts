@@ -42,7 +42,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteConfirmDialogComponent } from './shared/views/delete-confirm-dialog/delete-confirm-dialog.component';
-import {MatTableModule} from '@angular/material/table';
+
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { EmptyDataTableComponent } from './shared/views/empty-data-table/empty-data-table.component';
 import { LoginTimeOutDialogComponent } from './shared/views/login-time-out-dialog/login-time-out-dialog.component';
@@ -66,7 +66,7 @@ import {EmployeeTableComponent} from './views/modules/employee/employee-table/em
 import {EmployeeFormComponent} from './views/modules/employee/employee-form/employee-form.component';
 import {EmployeeDetailComponent} from './views/modules/employee/employee-detail/employee-detail.component';
 import {EmployeeUpdateFormComponent} from './views/modules/employee/employee-update-form/employee-update-form.component';
-import { YearWiseEmployeeCountComponent } from './views/modules/reports/year-wise-employee-count/year-wise-employee-count.component';
+
 // import { ClientFormComponent } from './views/modules/client/client-form/client-form.component';
 // import { ClientDetailComponent } from './views/modules/client/client-detail/client-detail.component';
 // import { ClientTableComponent } from './views/modules/client/client-table/client-table.component';
@@ -117,6 +117,19 @@ import { ProductOrderComponent } from './views/modules/product/product-order/pro
 import { ProductorderSubFormComponent } from './views/modules/product/product-order/productorder-sub-form/productorder-sub-form.component';
 import { ProductOrderTableComponent } from './views/modules/product/product-order-table/product-order-table.component';
 import { ProductInventoryTableComponent } from './views/modules/product/product-inventory-table/product-inventory-table.component';
+
+
+
+import { YearWiseEmployeeCountComponent } from './views/modules/reports/year-wise-employee-count/year-wise-employee-count.component';
+
+// Import ChartsModule from ng2-charts
+// @ts-ignore
+import { ChartsModule } from 'ng2-charts';
+// Import Angular Material modules
+// @ts-ignore
+import { MatTableModule } from '@angular/material/table';
+// Import MatTableExporterModule
+import { MatTableExporterModule } from 'mat-table-exporter';
 
 @NgModule({
     declarations: [
@@ -213,6 +226,7 @@ import { ProductInventoryTableComponent } from './views/modules/product/product-
       // ProductmaterialUpdateSubFormComponent,
       // ProductmaterialSubFormComponent,
 
+
     ],
   imports: [
     BrowserModule,
@@ -248,7 +262,8 @@ import { ProductInventoryTableComponent } from './views/modules/product/product-
     MatRadioModule,
     MatProgressSpinnerModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    BrowserModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },

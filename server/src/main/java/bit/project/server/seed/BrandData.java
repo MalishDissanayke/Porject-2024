@@ -8,15 +8,15 @@ import bit.project.server.util.seed.AbstractSeedClass;
 public class BrandData extends AbstractSeedClass {
 
     public BrandData(){
-        addIdNameData(1, "Motha");
-        addIdNameData(2, "Edinghboro");
-        addIdNameData(3, "Pelawatte");
-        addIdNameData(4, "Delmege");
-        addIdNameData(5, "Star");
-        addIdNameData(6, "Orient");
+        addIdNameData(1, "BASF");
+        addIdNameData(2, "Dow");
+        addIdNameData(3, "LyondellBasell");
+        addIdNameData(4, "Sumitomo Chemical");
+        addIdNameData(5, "Air Liquide");
+        addIdNameData(6, "ExxonMobil");
         addIdNameData(7, "Lanka");
-        addIdNameData(8, "Laughs Sun Up");
-        addIdNameData(9, "Harischandra");
+        addIdNameData(8, "LG Chem");
+        addIdNameData(9, "Linde");
         addIdNameData(10, "Other Brand");
     }
 

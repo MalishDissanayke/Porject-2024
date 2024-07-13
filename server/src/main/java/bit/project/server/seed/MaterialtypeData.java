@@ -8,10 +8,10 @@ import bit.project.server.util.seed.AbstractSeedClass;
 public class MaterialtypeData extends AbstractSeedClass {
 
     public MaterialtypeData(){
-        addIdNameData(1, "Flour");
-        addIdNameData(2, "Essance");
-        addIdNameData(3, "Sugar");
-        addIdNameData(4, "Gelatin");
+        addIdNameData(1, "Iron");
+        addIdNameData(2, "Chemicals");
+        addIdNameData(3, "Steel");
+        addIdNameData(4, "Adhesive");
         addIdNameData(5, "Other");
     }
 
