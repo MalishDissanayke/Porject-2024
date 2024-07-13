@@ -133,6 +133,7 @@ export class MainWindowComponent implements OnInit, OnDestroy {
     const supplierpaymentLink = new LinkItem('Supplier Payment Management', '/', 'payment');
     const materialdisposalLink = new LinkItem('Material Disposal Management', '/', 'delete_forever');
     const productLink = new LinkItem('Product Management', '', 'local_shipping');
+    const reportLink = new LinkItem('Report', '/', 'analytics');
     // const branchLink = new LinkItem('BranchManagement', '', 'local_shipping');
 
     const showUserLink = new LinkItem('Show All Users', '/users', 'list');
@@ -241,6 +242,10 @@ export class MainWindowComponent implements OnInit, OnDestroy {
         showAllProductLink.addUsecaseId(UsecaseList.ADD_PRODUCT_ORDER);
         productLink.children.push(ProductOrderLink);
 
+    const showYearWiseEmployeeCounttLink = new LinkItem('Year Wise Employee Count', 'reports/year-wise-employee-count/{yearcount}', 'assignment');
+    showYearWiseEmployeeCounttLink.addUsecaseId(UsecaseList.SHOW_YEAR_WISE_EMPLOYEE_COUNT);
+    reportLink.children.push(showYearWiseEmployeeCounttLink);
+
     this.linkItems.push(dashboardLink);
     this.linkItems.push(userLink);
     this.linkItems.push(roleLink);
@@ -253,7 +258,7 @@ export class MainWindowComponent implements OnInit, OnDestroy {
     this.linkItems.push(supplierpaymentLink);
     this.linkItems.push(materialdisposalLink);
     this.linkItems.push(productLink);
-
+    this.linkItems.push(reportLink);
     // this.linkItems.push(branchLink);
 
   }

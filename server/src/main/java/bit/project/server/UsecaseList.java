@@ -68,7 +68,10 @@ public enum UsecaseList{
     @SystemModule("Product") SHOW_PRODUCT_DETAILS(63),
     @SystemModule("Product") ADD_PRODUCT(64),
     @SystemModule("Product") UPDATE_PRODUCT(65),
-    @SystemModule("Product") DELETE_PRODUCT(66);
+    @SystemModule("Product") DELETE_PRODUCT(66),
+    @SystemModule("Product") ADD_PRODUCT_INVENTORY(67),
+    @SystemModule("Product") ADD_PRODUCT_ORDER(68),
+    @SystemModule("Product") SHOW_YEAR_WISE_EMPLOYEE_COUNT(69);
 
     public final int value;
 

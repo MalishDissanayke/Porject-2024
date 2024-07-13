@@ -1,70 +1,53 @@
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
-<p>dashboard works! </p>
+<H3 class="'mat-title">Dashboard</H3>
+<mat-card>
+<mat-card-content>
+<div class="row">
+  <div *ngIf="dashboardPrivilage.showEmployees" class="col-md-4">
+    <div class="dashboard-box bg-secondary">
+      <div class="dashboard-box-data">
+        <span class="dashboard-box-value">{{recentEmployeeCount}}</span>
+        <span class="dashboard-box-label">Last Week Guest Users </span>
+      </div>
+      <div class="dashboard-box-link">
+        <a mat-button href="http://localhost:4200/employees">More info<mat-icon>play_arrow</mat-icon></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="dashboardPrivilage.showMaterials" class="col-md-4">
+    <div class="dashboard-box bg-warning">
+      <div class="dashboard-box-data">
+        <span class="dashboard-box-value">{{recentMaterialCount}}</span>
+        <span class="dashboard-box-label">Last Week Materials </span>
+      </div>
+      <div class="dashboard-box-link">
+        <a mat-button href="http://localhost:4200/materials">More info<mat-icon>play_arrow</mat-icon></a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div><br>
+
+  <div class="row">
+  <div *ngIf="dashboardPrivilage.showSuppliers" class="col-md-4">
+    <div class="dashboard-box bg-primary">
+      <div class="dashboard-box-data">
+        <span class="dashboard-box-value">{{recentSupplierCount}}</span>
+        <span class="dashboard-box-label">Last Week Suppliers </span>
+      </div>
+      <div class="dashboard-box-link">
+        <a mat-button href="http://localhost:4200/suppliers">More info<mat-icon>play_arrow</mat-icon></a>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+</mat-card-content>
+</mat-card>

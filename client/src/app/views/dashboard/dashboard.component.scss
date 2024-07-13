@@ -1,0 +1,24 @@
+.dashboard-box{
+  background-color: cornflowerblue;
+  padding: 10px;
+  color: white!important;
+
+  .dashboard-box-data{
+    .dashboard-box-value{
+      font-size: 50px;
+      display: block;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    }
+    .dashboard-box-label{
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  .dashboard-box-link{
+    text-align: center;
+  }
+}
+
+

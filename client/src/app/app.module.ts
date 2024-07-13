@@ -66,6 +66,7 @@ import {EmployeeTableComponent} from './views/modules/employee/employee-table/em
 import {EmployeeFormComponent} from './views/modules/employee/employee-form/employee-form.component';
 import {EmployeeDetailComponent} from './views/modules/employee/employee-detail/employee-detail.component';
 import {EmployeeUpdateFormComponent} from './views/modules/employee/employee-update-form/employee-update-form.component';
+import { YearWiseEmployeeCountComponent } from './views/modules/reports/year-wise-employee-count/year-wise-employee-count.component';
 // import { ClientFormComponent } from './views/modules/client/client-form/client-form.component';
 // import { ClientDetailComponent } from './views/modules/client/client-detail/client-detail.component';
 // import { ClientTableComponent } from './views/modules/client/client-table/client-table.component';
@@ -112,7 +113,7 @@ import {ProductmaterialSubFormComponent} from './views/modules/product/product-f
 import {ProductmaterialUpdateSubFormComponent} from './views/modules/product/product-update-form/productmaterial-update-sub-form/productmaterial-update-sub-form.component';
 import {ProductUpdateFormComponent} from './views/modules/product/product-update-form/product-update-form.component';
 import { ProductInventoryComponent } from './views/modules/product/product-inventory/product-inventory.component';
-import { ProductOrderComponent } from './views/modules/product/product-order/product-order.component'; 
+import { ProductOrderComponent } from './views/modules/product/product-order/product-order.component';
 import { ProductorderSubFormComponent } from './views/modules/product/product-order/productorder-sub-form/productorder-sub-form.component';
 import { ProductOrderTableComponent } from './views/modules/product/product-order-table/product-order-table.component';
 import { ProductInventoryTableComponent } from './views/modules/product/product-inventory-table/product-inventory-table.component';
