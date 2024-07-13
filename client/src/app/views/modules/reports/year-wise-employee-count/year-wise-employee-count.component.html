@@ -2,15 +2,19 @@
   <div class="row">
     <div class="col-md-10">
       <div style="display: block; height: 400px;">
-        <canvas baseChart
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                [plugins]="lineChartPlugins">
-        </canvas>
+        <ngx-charts-line-chart
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="chartData"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel">
+        </ngx-charts-line-chart>
       </div>
     </div>
     <div class="col-md-2">
@@ -18,7 +22,7 @@
         <!-- Dropdown or other controls can go here if needed -->
       </div>
       <br>
-      <table mat-table matTableExporter #exporter="matTableExporter" [dataSource]="yearWiseData" class="mat-elevation-z8">
+      <table mat-table [dataSource]="yearWiseData" class="mat-elevation-z8">
         <!-- Define columns -->
         <ng-container matColumnDef="year">
           <th mat-header-cell *matHeaderCellDef> Year </th>
@@ -37,4 +41,3 @@
   </div>
 </div>
 <button (click)="print()">Print</button>
-<button (click)="exporter.exportTable('xls', { fileName: 'Year wise employee report' })">Export to Excel</button>

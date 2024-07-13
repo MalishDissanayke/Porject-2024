@@ -130,6 +130,7 @@ import { ChartsModule } from 'ng2-charts';
 import { MatTableModule } from '@angular/material/table';
 // Import MatTableExporterModule
 import { MatTableExporterModule } from 'mat-table-exporter';
+import {LineChartModule} from "@swimlane/ngx-charts";
 
 @NgModule({
     declarations: [
@@ -225,6 +226,7 @@ import { MatTableExporterModule } from 'mat-table-exporter';
       // ProductUpdateFormComponent,
       // ProductmaterialUpdateSubFormComponent,
       // ProductmaterialSubFormComponent,
+      YearWiseEmployeeCountComponent,
 
 
     ],
@@ -263,7 +265,10 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     MatProgressSpinnerModule,
     MatTabsModule,
     FormsModule,
-    BrowserModule
+
+    BrowserModule,
+    MatTableModule,
+    LineChartModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
