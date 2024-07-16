@@ -20,7 +20,7 @@ import {EmployeeTableComponent} from './views/modules/employee/employee-table/em
 import {EmployeeFormComponent} from './views/modules/employee/employee-form/employee-form.component';
 import {EmployeeDetailComponent} from './views/modules/employee/employee-detail/employee-detail.component';
 import {EmployeeUpdateFormComponent} from './views/modules/employee/employee-update-form/employee-update-form.component';
-import {YearWiseEmployeeCountComponent} from "./views/modules/reports/year-wise-employee-count/year-wise-employee-count.component";
+// import {YearWiseEmployeeCountComponent} from "./views/modules/reports/year-wise-employee-count/year-wise-employee-count.component";
 // import {ClientTableComponent} from './views/modules/client/client-table/client-table.component';
 // import {ClientFormComponent} from './views/modules/client/client-form/client-form.component';
 // import {ClientDetailComponent} from './views/modules/client/client-detail/client-detail.component';
@@ -133,7 +133,7 @@ const routes: Routes = [
       {path: 'products/:id', component: ProductDetailComponent},
       {path: 'products/edit/:id', component: ProductUpdateFormComponent},
 
-      {path: 'reports/year-wise-employee-count/:id', component: YearWiseEmployeeCountComponent},
+      // {path: 'reports/year-wise-employee-count/:id', component: YearWiseEmployeeCountComponent},
 
       // {path: 'branches', component: BranchTableComponent},
       // {path: 'branches/add', component: BranchFormComponent},

@@ -119,8 +119,8 @@ import { ProductOrderTableComponent } from './views/modules/product/product-orde
 import { ProductInventoryTableComponent } from './views/modules/product/product-inventory-table/product-inventory-table.component';
 
 
-
-import { YearWiseEmployeeCountComponent } from './views/modules/reports/year-wise-employee-count/year-wise-employee-count.component';
+//
+// import { YearWiseEmployeeCountComponent } from './views/modules/reports/year-wise-employee-count/year-wise-employee-count.component';
 
 // Import ChartsModule from ng2-charts
 // @ts-ignore
@@ -129,8 +129,8 @@ import { ChartsModule } from 'ng2-charts';
 // @ts-ignore
 import { MatTableModule } from '@angular/material/table';
 // Import MatTableExporterModule
-import { MatTableExporterModule } from 'mat-table-exporter';
-import {LineChartModule} from "@swimlane/ngx-charts";
+// import { MatTableExporterModule } from 'mat-table-exporter';
+// import {LineChartModule} from "@swimlane/ngx-charts";
 
 @NgModule({
     declarations: [
@@ -205,6 +205,7 @@ import {LineChartModule} from "@swimlane/ngx-charts";
       PurchaseDetailComponent,
       MaterialdisposalmaterialSubFormComponent,
 
+
       // BranchDetailComponent,
       // BranchFormComponent,
       // BranchTableComponent,
@@ -226,7 +227,8 @@ import {LineChartModule} from "@swimlane/ngx-charts";
       // ProductUpdateFormComponent,
       // ProductmaterialUpdateSubFormComponent,
       // ProductmaterialSubFormComponent,
-      YearWiseEmployeeCountComponent,
+      // YearWiseEmployeeCountComponent,
+
 
 
     ],
@@ -265,10 +267,12 @@ import {LineChartModule} from "@swimlane/ngx-charts";
     MatProgressSpinnerModule,
     MatTabsModule,
     FormsModule,
-
+    BrowserModule,
+    HttpClientModule,
     BrowserModule,
     MatTableModule,
-    LineChartModule
+    // LineChartModule,
+    ChartsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
