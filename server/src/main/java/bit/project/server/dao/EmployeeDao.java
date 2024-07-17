@@ -31,4 +31,8 @@ public interface EmployeeDao extends JpaRepository<Employee, Integer>{
     Employee findByMobile(String mobile);
     Employee findByEmail(String email);
 
+
+    @Query("SELECT COUNT(e) FROM Employee e WHERE e.tocreation BETWEEN :startDate AND :endDate")
+    Long countEmployeesByCreatedDateBetween(@Param("startDate") LocalDateTime startDate, @Param("endDate") LocalDateTime endDate);
+
 }

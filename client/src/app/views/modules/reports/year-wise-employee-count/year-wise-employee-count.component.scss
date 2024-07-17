@@ -1,8 +1,23 @@
-mat-table{
+.report-table {
   width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-.chart-container {
-  position: relative;
-  height: 400px;
-  width: 100%;
+
+.report-table th, .report-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #f2f2f2;
+}
+
+.report-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  margin-top: 10px;
 }
