@@ -28,6 +28,8 @@ public interface MaterialDao extends JpaRepository<Material, Integer>{
     @Query("select new Material (m.id,m.code,m.name,m.brand) from Material m where m.tocreation>=:dateTime")
     List<Material> findAllByToCreationAfter (@Param("dateTime") LocalDateTime datetime) ;
 
+    @Query("SELECT m.name, m.qty FROM Material m")
+    List<Object[]> findAllMaterialsAndQuantities();
 
 
 

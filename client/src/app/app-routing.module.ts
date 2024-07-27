@@ -59,6 +59,7 @@ import {ProductDetailComponent} from './views/modules/product/product-detail/pro
 import {ProductUpdateFormComponent} from './views/modules/product/product-update-form/product-update-form.component';
 import { ProductOrderTableComponent } from './views/modules/product/product-order-table/product-order-table.component';
 import { ProductInventoryTableComponent } from './views/modules/product/product-inventory-table/product-inventory-table.component';
+import { MaterialReportComponent } from "./views/modules/reports/material-report/material-report.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -134,6 +135,7 @@ const routes: Routes = [
       {path: 'products/edit/:id', component: ProductUpdateFormComponent},
 
       {path: 'reports/year-wise-employee-count/:id', component: YearWiseEmployeeCountComponent},
+      {path: 'reports/material-report' , component: MaterialReportComponent},
 
       // {path: 'branches', component: BranchTableComponent},
       // {path: 'branches/add', component: BranchFormComponent},

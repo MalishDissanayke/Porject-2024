@@ -226,7 +226,7 @@ export class MainWindowComponent implements OnInit, OnDestroy {
     // showAllBranchLink.addUsecaseId(UsecaseList.SHOW_ALL_BRANCHES);
     // branchLink.children.push(showAllBranchLink);
 
-    const addNewProductLink = new LinkItem('Add New Supplier Purchase Order', 'products/add', 'add');
+    const addNewProductLink = new LinkItem('Add New Product Purchase Order', 'products/add', 'add');
     addNewProductLink.addUsecaseId(UsecaseList.ADD_PRODUCT);
     productLink.children.push(addNewProductLink);
 
@@ -245,6 +245,12 @@ export class MainWindowComponent implements OnInit, OnDestroy {
     const showYearWiseEmployeeCounttLink = new LinkItem('Year Wise Employee Count', 'reports/year-wise-employee-count/{yearcount}', 'assignment');
     showYearWiseEmployeeCounttLink.addUsecaseId(UsecaseList.SHOW_YEAR_WISE_EMPLOYEE_COUNT);
     reportLink.children.push(showYearWiseEmployeeCounttLink);
+
+    const showMaterialQuantitiesLink = new LinkItem('Material Quantities', 'reports/material-report', 'assignment');
+    showMaterialQuantitiesLink.addUsecaseId(UsecaseList.SHOW_MATERIAL_QUANTITIES);
+    reportLink.children.push(showMaterialQuantitiesLink);
+
+
 
     this.linkItems.push(dashboardLink);
     this.linkItems.push(userLink);

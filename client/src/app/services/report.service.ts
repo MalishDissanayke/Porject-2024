@@ -32,5 +32,8 @@ export class ReportService {
     return await this.http.get<any[]>(url).toPromise();
 
   }
-
+  async getMaterialQuantities(): Promise<any[]> {
+    const url = ApiManager.getURL('reports/material-report');
+    return await this.http.get<any[]>(url).toPromise();
+  }
 }

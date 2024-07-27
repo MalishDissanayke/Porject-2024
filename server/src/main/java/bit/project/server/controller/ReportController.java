@@ -2,6 +2,7 @@ package bit.project.server.controller;
 
 import bit.project.server.UsecaseList;
 import bit.project.server.dao.EmployeeDao;
+import bit.project.server.dao.MaterialDao;
 import bit.project.server.util.security.AccessControlManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -20,6 +22,9 @@ public class ReportController {
 
     @Autowired
     public EmployeeDao employeeDao;
+
+    @Autowired
+    private MaterialDao materialDao;
 
     @Autowired
     public AccessControlManager accessControlManager;
@@ -51,6 +56,23 @@ public class ReportController {
             d.put("year", y);
             d.put("count", count);
             data.add(d);
+        }
+
+        return data;
+    }
+
+    @GetMapping("/material-report")
+    public List<HashMap<String, Object>> materialQuantities(HttpServletRequest request) {
+        accessControlManager.authorize(request, "No privilege to get material quantities", UsecaseList.SHOW_MATERIAL_QUANTITIES);
+
+        List<Object[]> results = materialDao.findAllMaterialsAndQuantities();
+        List<HashMap<String, Object>> data = new ArrayList<>();
+
+        for (Object[] result : results) {
+            HashMap<String, Object> record = new HashMap<>();
+            record.put("name", result[0]);
+            record.put("quantity", result[1]);
+            data.add(record);
         }
 
         return data;

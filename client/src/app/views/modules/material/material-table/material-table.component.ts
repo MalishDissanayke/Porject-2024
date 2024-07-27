@@ -11,6 +11,10 @@ import {Material, MaterialDataPage} from 'src/app/entities/material';
 import {Brand} from "../../../../entities/brand";
 import {MaterialService} from "../../../../services/material.service";
 import {BrandService} from "../../../../services/brand.service";
+import {Employeestatus} from "../../../../entities/employeestatus";
+import {Materialstatus} from "../../../../entities/materialstatus";
+import {EmployeestatusService} from "../../../../services/employeestatus.service";
+import {MaterialstatusService} from "../../../../services/materialstatus.service";
 
 
 @Component({
@@ -24,7 +28,7 @@ export class MaterialTableComponent extends AbstractComponent implements OnInit 
   displayedColumns: string[] = [];
   pageSize = 5;
   pageIndex = 0;
-
+  materialstatus: Materialstatus[] = [];
   brands: Brand[] = [];
 
   codeField = new FormControl();
@@ -35,13 +39,17 @@ export class MaterialTableComponent extends AbstractComponent implements OnInit 
 
   private materialService: MaterialService;
 
+  private materialstatusService: MaterialstatusService;
+
   constructor(
     brandService: BrandService,
     materialService: MaterialService,
+    materialstatusService: MaterialstatusService,
     private dialog: MatDialog,
     private snackBar: MatSnackBar
   ) {
     super();
+    this.materialstatusService = materialstatusService;
     this.materialService = materialService;
     this.brandService = brandService;
   }
@@ -91,7 +99,7 @@ export class MaterialTableComponent extends AbstractComponent implements OnInit 
   }
 
   setDisplayedColumns(): void{
-    this.displayedColumns = ['code', 'name', 'brand'];
+    this.displayedColumns = ['code', 'name', 'status','brand'];
 
     if (this.privilege.delete) { this.displayedColumns.push('delete-col'); }
     if (this.privilege.update) { this.displayedColumns.push('update-col'); }

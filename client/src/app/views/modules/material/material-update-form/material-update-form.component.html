@@ -92,15 +92,15 @@
             </div>
             <div class="col-md-4">
               <mat-form-field appearance="outline" class="w-100">
-                <mat-label>Re-order Point</mat-label>
+                <mat-label>Minimun Material Amount</mat-label>
                 <input type="number" matInput formControlName="rop" required>
                 <mat-hint>Ex: 100.00</mat-hint>
                 <mat-error *ngIf="ropField.invalid">
-                  <span *ngIf="ropField.errors.required">Re-order Point is required</span>
+                  <span *ngIf="ropField.errors.required">Minimun Material Amount is required</span>
                   <span *ngIf="ropField.errors.server">{{ropField.errors.server.join(', ')}}</span>
-                  <span *ngIf="ropField.errors.minlength">Re-order Point should be equal or greater than 2</span>
-                  <span *ngIf="ropField.errors.maxlength">Re-order Point should be equal or less than 13</span>
-                  <span *ngIf="ropField.errors.pattern">Re-order Point is invalid.</span>
+                  <span *ngIf="ropField.errors.minlength">Minimun Material Amount should be equal or greater than 2</span>
+                  <span *ngIf="ropField.errors.maxlength">Minimun Material Amount should be equal or less than 13</span>
+                  <span *ngIf="ropField.errors.pattern">RMinimun Material Amount Point is invalid.</span>
                 </mat-error>
               </mat-form-field>
             </div>

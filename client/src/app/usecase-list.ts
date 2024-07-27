@@ -69,5 +69,9 @@ export abstract class UsecaseList {
   public static readonly ADD_PRODUCT_INVENTORY = 67;
   public static readonly ADD_PRODUCT_ORDER = 68;
   public static readonly SHOW_YEAR_WISE_EMPLOYEE_COUNT = 69;
+  public static readonly SHOW_MATERIAL_QUANTITIES = 70;
+
+
+
 
 }

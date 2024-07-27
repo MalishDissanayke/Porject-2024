@@ -59,7 +59,7 @@ public class EmployeeController{
         codeConfig = new CodeGenerator.CodeGeneratorConfig("employee");
         codeConfig.setColumnName("code");
         codeConfig.setLength(8);
-        codeConfig.setPrefix("EM");
+        codeConfig.setPrefix("USR");
         codeConfig.setYearlyRenew(true);
     }
 

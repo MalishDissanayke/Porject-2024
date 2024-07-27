@@ -24,9 +24,9 @@ export class ProductOrderTableComponent extends AbstractComponent implements OnI
     private snackBar: MatSnackBar,
   ) {
     super();
-   }
+  }
 
-   productDataPage: ProductDataPage;
+  productDataPage: ProductDataPage;
   displayedColumns: string[] = [];
   pageSize = 5;
   pageIndex = 0;
@@ -63,7 +63,7 @@ export class ProductOrderTableComponent extends AbstractComponent implements OnI
     //   this.productService.getAllOdd(pageRequest).then((page: ProductDataPage) => {
     //     this.productDataPage = page;
     //     console.log(this.productDataPage);
-      
+
     // }).catch( e => {
     //   console.log(e);
     //   this.snackBar.open('Something is wrong', null, {duration: 2000});
@@ -73,11 +73,11 @@ export class ProductOrderTableComponent extends AbstractComponent implements OnI
     this.productService.getAllOrders().then((pinventory) => {
       this.orderList = pinventory;
       console.log("dgfsfdsad");
-      
+
       console.log(this.orderList);
       // this.productDataPage.totalElements = pinventory.length;
-      
-  
+
+
     }).catch((e) => {
       console.log(e);
       this.snackBar.open('Something is wrong', null, {duration: 2000});

@@ -131,6 +131,7 @@ import { MatTableModule } from '@angular/material/table';
 // Import MatTableExporterModule
 import { MatTableExporterModule } from 'mat-table-exporter';
 import {LineChartModule} from "@swimlane/ngx-charts";
+import {MaterialReportComponent} from "./views/modules/reports/material-report/material-report.component";
 
 @NgModule({
     declarations: [
@@ -227,6 +228,9 @@ import {LineChartModule} from "@swimlane/ngx-charts";
       // ProductmaterialUpdateSubFormComponent,
       // ProductmaterialSubFormComponent,
       YearWiseEmployeeCountComponent,
+
+
+      MaterialReportComponent,
 
 
     ],
